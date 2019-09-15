@@ -1,10 +1,10 @@
 <idea-plugin>
     <id>codeseekpluginid</id>
-    <name>Codeseek developer friendly search plugin</name>
+    <name>Codeseek developer friendly search</name>
     <vendor email="stremovsky@gmail.com" url="https://codeseek.com">Codeseek</vendor>
 
     <description><![CDATA[
-    Codeseek developer friendly search plugin.
+    Codeseek is a search engine for looking up everything about code.
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html

@@ -3,8 +3,8 @@ plugins {
     id 'org.jetbrains.intellij' version '0.4.10'
 }
 
-group 'testproj.com'
-version '1.0-SNAPSHOT'
+group 'codeseek.com'
+version '1.0.1'
 
 sourceCompatibility = 1.8
 
@@ -22,6 +22,5 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      Initial project version."""
 }
