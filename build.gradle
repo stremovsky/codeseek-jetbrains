@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'codeseek.com'
-version '1.0.1'
+version '1.0.3'
 
 sourceCompatibility = 1.8
 
@@ -22,5 +22,5 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Initial project version."""
+      Initial project version for all IntelliJ based IDE programs."""
 }

@@ -4,6 +4,7 @@ import com.intellij.ide.browsers.BrowserLauncher;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import com.intellij.openapi.application.ApplicationInfo;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -29,7 +30,14 @@ public class CodeseekPlugin extends AnAction {
             return;
         }
         SelectionModel model = editor.getSelectionModel();
-        String selectedText = model.getSelectedText().trim();
+        if (model == null) {
+            return;
+        }
+        String selectedText = model.getSelectedText();
+        if (selectedText == null) {
+            return;
+        }
+        selectedText = selectedText.trim();
         if (selectedText.isEmpty()) {
             return;
         }
@@ -37,12 +45,18 @@ public class CodeseekPlugin extends AnAction {
         if (selectedText.length() > 1024) {
             selectedText = selectedText.substring(0, 1024);
         }
+        //ApplicationManager.getApplication().ge
         String url = null;
         try {
-            url = "https://codeseek.com/?q=" +  URLEncoder.encode(selectedText, "UTF-8");
+            ApplicationInfo appInfo = ApplicationInfo.getInstance();
+            String appName = URLEncoder.encode(appInfo.getFullApplicationName());
+            url = "https://codeseek.com/?app=" + appName +
+                    "&q=" +  URLEncoder.encode(selectedText, "UTF-8");
+            BrowserLauncher.getInstance().browse(url, null);
         } catch (UnsupportedEncodingException e) {
             return;
+        } catch (Exception e) {
+            return;
         }
-        BrowserLauncher.getInstance().browse(url, null);
     }
 }

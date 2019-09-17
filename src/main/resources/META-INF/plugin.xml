@@ -4,7 +4,32 @@
     <vendor email="stremovsky@gmail.com" url="https://codeseek.com">Codeseek</vendor>
 
     <description><![CDATA[
-    Codeseek is a search engine for looking up everything about code.
+    <p>Codeseek is a search engine for looking up everything about code.</p>
+    <p>You will be more effective using Codeseek service.</p>
+    <br/>
+    <p><strong>Main features:</strong></p>
+    <ul>
+         <li>Filter results by programming language: Java, Pythong, Go, etc...</li>
+         <li>Display commercial friendly licence info for open source projects.</li>
+         <li>Plugins for Android Studio, VSCODE, IntelliJ, WebStorm, etc..</li>
+         <li>Curated index of developer friendly websites.</li>
+         <li>No unrelated pages in the results.</li>
+     </ul>
+     <br/>
+     <p><strong>Installation for Android Studio</strong></p>
+     <ol>
+        <li>Run Android Studio.</li>
+        <li>From the menu bar, select Android Studio > Preferences.</li>
+        <li>Under IDE Settings, click Plugins and then type in <strong>codeseek</strong> in plugin name.</li>
+        <li>Install the plugin and restart Android Studio.</li>
+     </ol>
+     <br>
+     <p><strong>How to use?</strong></p>
+     <ol>
+        <li>Select the text in the editor.</li>
+        <li>With the right mouse click, select in menu <strong>Codeseek this</strong>.</li>
+        <li>You will get results of the codeseek search.</li>
+     </ol>
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
